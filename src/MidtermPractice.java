@@ -72,8 +72,42 @@ public class MidtermPractice {
     }
 
     /**
-     * OPTIONAL MORE CHALLENGING PROBLEM
-     * NOT REQUIRED
+     * Prints out each value in a linked list on a separate line.
+     * Does not print anything if the head is null
+     * @param head the head of the linked list.
+     */
+    public static void printList(ListNode head) {
+    }
+
+    /**
+     * Returns the product of all values in a linked list or 1 if the head is null.
+     * @param head the head of the linked list
+     * @return the product of all values in a linked list or 1 if the head is null.
+     * Example Input: 5 -> 3 -> 4
+     * Example output: 60
+     * Explanation: 5 * 3 * 4 = 20
+     */
+    public static int product(ListNode head) {
+        return 1;
+    }
+
+    /**
+     * CHALLENGE PROBLEM: take extra time for this problem if needed
+     * 
+     * Removes all nodes with values strictly less than 10.
+     * 
+     * @param head the original head of the linked list
+     * @return the new head of the linked list
+     * Example Input: 6 -> 99 -> 2 -> 33 -> 10 -> 4
+     * Example output: 99 -> 33 -> 10
+     * Explanation: 6, 2, and 4 are each strictly less than 10, so they are removed from the list
+     */
+    public static int removeSmall(ListNode head) {
+        return 1;
+    }
+
+    /**
+     * CHALLENGE PROBLEM: take extra time for this problem if needed
      *
      * Determines if the array can be split into two contiguous subarrays with equal sums.
      * The method checks if there exists an index where the sum of elements to the left of the index
