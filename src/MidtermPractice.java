@@ -2,13 +2,6 @@ import java.util.List;
 import java.util.Map;
 
 public class MidtermPractice {
-
-    public static void main(String[] args) {
-        // After implementing a method, call it here with
-        // some sample input and print the result to
-        // check if it works. Fix any issues you find.
-    }
-
     /**
      * Finds the longest word in an List of Strings.
      * If there are multiple words tied for longest, any of them can be returned.
