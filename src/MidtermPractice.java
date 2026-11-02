@@ -11,8 +11,9 @@ public class MidtermPractice {
 
     /**
      * Finds the longest word in an List of Strings.
+     * If there are multiple words tied for longest, any of them can be returned.
      * @param list an ArrayList of words
-     * @return the longest word in the list
+     * @return the longest word in the list or an empty String if the list is empty
      * Example: input: ["apple", "banana", "kiwi"] -> output: "banana"
      */
     public static String findLongestWord(List<String> list) {
@@ -32,7 +33,7 @@ public class MidtermPractice {
     /**
      * Finds the average of the floats in an array.
      * @param arr an array of floats
-     * @return the average of the values
+     * @return the average of the values or 0 if the array is empty
      * Example: input: [1.5, 3.5, 2.0, 3.0] -> output: 2.5
      */
     public static double findAverage(float[] arr) {
@@ -51,6 +52,7 @@ public class MidtermPractice {
 
     /**
      * Returns true if all values are divisible by 3 in an array.
+     * Also returns true if the array is empty.
      * @param arr an array of integers
      * @return true if all values are divisible by 3, false otherwise
      * Example: input: [3, 6, 9] -> output: true
@@ -61,10 +63,11 @@ public class MidtermPractice {
     }
 
     /**
-     * Returns true if all words start with 'a' in an ArrayList of Strings.
-     * @param list an ArrayList of words
+     * Returns true if all words start with 'a' or 'A' in an List of Strings.
+     * Returns true if the list is empty.
+     * @param list a List of words
      * @return true if all words start with 'a', false otherwise
-     * Example: input: ["apple", "apricot", "avocado"] -> output: true
+     * Example: input: ["apple", "Apricot", "avocado"] -> output: true
      * Example: input: ["apple", "banana", "avocado"] -> output: false
      */
     public static boolean allStartWithA(List<String> list) {
@@ -72,11 +75,12 @@ public class MidtermPractice {
     }
 
     /**
-     * Prints out each value in a linked list on a separate line.
-     * Does not print anything if the head is null
+     * Returns whether all nodes in a linked list contain positive (greater than 0) values.
+     * Returns true if the head is null.
      * @param head the head of the linked list.
      */
-    public static void printList(ListNode head) {
+    public static boolean allPositive(ListNode head) {
+        return true;
     }
 
     /**
@@ -85,7 +89,7 @@ public class MidtermPractice {
      * @return the product of all values in a linked list or 1 if the head is null.
      * Example Input: 5 -> 3 -> 4
      * Example output: 60
-     * Explanation: 5 * 3 * 4 = 20
+     * Explanation: 5 * 3 * 4 = 60
      */
     public static int product(ListNode head) {
         return 1;
@@ -94,7 +98,8 @@ public class MidtermPractice {
     /**
      * CHALLENGE PROBLEM: take extra time for this problem if needed
      * 
-     * Removes all nodes with values strictly less than 10.
+     * Removes all nodes with values strictly less than 10 and returns the new head.
+     * Returns null if the resulting list is empty.
      * 
      * @param head the original head of the linked list
      * @return the new head of the linked list
@@ -102,29 +107,8 @@ public class MidtermPractice {
      * Example output: 99 -> 33 -> 10
      * Explanation: 6, 2, and 4 are each strictly less than 10, so they are removed from the list
      */
-    public static int removeSmall(ListNode head) {
-        return 1;
-    }
-
-    /**
-     * CHALLENGE PROBLEM: take extra time for this problem if needed
-     *
-     * Determines if the array can be split into two contiguous subarrays with equal sums.
-     * The method checks if there exists an index where the sum of elements to the left of the index
-     * is equal to the sum of elements to the right. Both subarrays must be contiguous.
-     *
-     * @param arr an array of integers to evaluate
-     * @return true if there exists a split point where the left and right contiguous subarrays have equal sums, false otherwise
-     *
-     * Example:
-     * Input: [1, 3, 8, 2, 1, 2, 7]
-     * Output: true (since [1, 3, 8] and [2, 1, 2, 7] both sum to 12)
-     *
-     * Input: [1, 2, 3, 4, 5]
-     * Output: false (no contiguous split results in equal sums)
-     */
-    public static boolean canPartitionWithEqualSums(int[] arr) {
-        return false;
+    public static ListNode removeSmall(ListNode head) {
+        return null;
     }
 
 }
