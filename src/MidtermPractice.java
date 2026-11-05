@@ -10,7 +10,8 @@ public class MidtermPractice {
      * @return the longest word in the list or an empty String if the list is empty
      * Example: input: ["apple", "banana", "kiwi"] -> output: "banana"
      * 
-     * TIME LEFT: 4:27
+     * TIME LEFT: 4:01
+     * TIME COMPLEXITY: O(n) n = list.size()
      */
     public static String findLongestWord(List<String> list) {
         // Map<String, Integer> longestWordMap = new HashMap<>();
@@ -41,9 +42,27 @@ public class MidtermPractice {
      * @param map a Map of strings to integers
      * @return the count of words longer than 5 characters
      * Example: input: ["why"=7, "hello"=8, "brilliant"=99, "world"=15, "amazing"=17] -> output: 2
+     * 
+     * TIME LEFT 4:13
+     * TIME COMPLEXITY: O(n^2) n = number of words
      */
     public static int countLongWords(Map<String, Integer> map) {
-        return -1;
+        int longWords = 0;
+
+        for (String word : map.keySet()) {
+            char[] characters = word.toCharArray();
+            
+            int charCount = 0;
+            for (int i = 0; i < characters.length; i++) {
+                charCount++;    
+            }
+
+            if (charCount > 5) {
+                longWords++;
+            }
+        }
+
+        return longWords;
     }
 
     /**
