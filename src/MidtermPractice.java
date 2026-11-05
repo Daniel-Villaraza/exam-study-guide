@@ -1,4 +1,3 @@
-import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -14,19 +13,6 @@ public class MidtermPractice {
      * TIME COMPLEXITY: O(n), n = list.size()
      */
     public static String findLongestWord(List<String> list) {
-        // Map<String, Integer> longestWordMap = new HashMap<>();
-        
-        // for (String word : list) {
-        //     char[] chars = word.toCharArray();
-            
-        //     int lettersInWord = 0;
-        //     for (int i = 0; i < chars.length; i++) {
-        //         lettersInWord++;
-        //     }
-
-        //     longestWordMap.put(word, lettersInWord);
-        // }
-
         String longestWord = "";
         for (String word : list) {
             if (word.length() > longestWord.length()) {
