@@ -11,7 +11,7 @@ public class MidtermPractice {
      * Example: input: ["apple", "banana", "kiwi"] -> output: "banana"
      * 
      * TIME LEFT: 4:01
-     * TIME COMPLEXITY: O(n) n = list.size()
+     * TIME COMPLEXITY: O(n), n = list.size()
      */
     public static String findLongestWord(List<String> list) {
         // Map<String, Integer> longestWordMap = new HashMap<>();
@@ -44,7 +44,7 @@ public class MidtermPractice {
      * Example: input: ["why"=7, "hello"=8, "brilliant"=99, "world"=15, "amazing"=17] -> output: 2
      * 
      * TIME LEFT 4:13
-     * TIME COMPLEXITY: O(n^2) n = number of words
+     * TIME COMPLEXITY: O(n^2), n = number of words
      */
     public static int countLongWords(Map<String, Integer> map) {
         int longWords = 0;
@@ -70,9 +70,29 @@ public class MidtermPractice {
      * @param arr an array of floats
      * @return the average of the values or 0 if the array is empty
      * Example: input: [1.5, 3.5, 2.0, 3.0] -> output: 2.5
+     * 
+     * TIME LEFT: RAN OUT OF TIME
+     * TIME COMPLEXITY: O(n) n = arr.length
+     * 
+     * NOTE: Couldn't make last test case pass for empty array.
+     * FIX: Changed first if statement to check if arr.length == 0 instead of arr == null
      */
     public static double findAverage(float[] arr) {
-        return -1.0;
+        if (arr.length == 0) {
+            return 0.0;
+        }
+
+        int doubleCount = 0;
+        double sum = 0.0;
+
+        for (int i = 0; i < arr.length; i++) {
+            sum += arr[i];
+            doubleCount++;
+        }
+
+        double average = 1.0 * sum / doubleCount;
+
+        return average;
     }
 
     /**
