@@ -29,7 +29,7 @@ public class MidtermPractice {
      * @return the count of words longer than 5 characters
      * Example: input: ["why"=7, "hello"=8, "brilliant"=99, "world"=15, "amazing"=17] -> output: 2
      * 
-     * TIME LEFT 4:13
+     * TIME LEFT: 4:13
      * TIME COMPLEXITY: O(a * b), a = number of keys, b = length of characters
      */
     public static int countLongWords(Map<String, Integer> map) {
