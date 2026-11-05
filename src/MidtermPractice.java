@@ -202,9 +202,24 @@ public class MidtermPractice {
      * Example Input: 5 -> 3 -> 4
      * Example output: 60
      * Explanation: 5 * 3 * 4 = 60
+     * 
+     * TIME LEFT: 8:03
+     * TIME COMPLEXITY: O(n), n = the length of the LinkedList
      */
     public static int product(ListNode head) {
-        return 1;
+        if (head == null) {
+            return 1;
+        }
+
+        ListNode current = head;
+
+        int product = 1;
+        while (current != null) {
+            product *= current.data;
+            current = current.next;
+        }
+
+        return product;
     }
 
     /**
