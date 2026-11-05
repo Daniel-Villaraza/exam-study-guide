@@ -148,9 +148,25 @@ public class MidtermPractice {
      * @return true if all words start with 'a', false otherwise
      * Example: input: ["apple", "Apricot", "avocado"] -> output: true
      * Example: input: ["apple", "banana", "avocado"] -> output: false
+     * 
+     * TIME LEFT: 5:05
+     * TIME COMPLEXITY: O(n), n = list.size()
      */
     public static boolean allStartWithA(List<String> list) {
-        return false;
+        if (list.isEmpty()) {
+            return true;
+        }
+
+        for (String word : list) {
+            String wordLowerCase = word.toLowerCase();
+            char[] chars = wordLowerCase.toCharArray();
+
+            if (chars[0] != 'a') {
+                return false;
+            }
+        }
+
+        return true;
     }
 
     /**
