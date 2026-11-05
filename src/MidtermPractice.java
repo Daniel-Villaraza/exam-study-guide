@@ -123,9 +123,22 @@ public class MidtermPractice {
      * @return true if all values are divisible by 3, false otherwise
      * Example: input: [3, 6, 9] -> output: true
      * Example 2: input: [3, 4, 6, 9] -> output: false
+     * 
+     * TIME LEFT: 8:32
+     * TIME COMPLEXITY: O(n), n = arr.length
      */
     public static boolean allDivisibleBy3(int[] arr) {
-        return false;
+        if (arr.length == 0) {
+            return true;
+        }
+
+        for (int i = 0; i < arr.length; i++) {
+            if (arr[i] % 3 != 0) {
+                return false;
+            }
+        }
+
+        return true;
     }
 
     /**
