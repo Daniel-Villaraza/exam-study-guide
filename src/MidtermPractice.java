@@ -100,9 +100,20 @@ public class MidtermPractice {
      * @param map a HashMap of String keys and Integer values
      * @return the count of odd numbers in the values
      * Example: input: {"a"=7, "x"=4, "z"=5} -> output: 2
+     * 
+     * TIME LEFT: 7:17
+     * TIME COMPLEXITY: O(n), n = map.values()
      */
     public static int countOddNumbers(Map<String, Integer> map) {
-        return -1;
+        int oddNumberCount = 0;
+
+        for (int number : map.values()) {
+            if (number % 2 != 0) {
+                oddNumberCount++;
+            }
+        }
+
+        return oddNumberCount;
     }
 
     /**
