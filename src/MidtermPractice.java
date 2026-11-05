@@ -173,8 +173,25 @@ public class MidtermPractice {
      * Returns whether all nodes in a linked list contain positive (greater than 0) values.
      * Returns true if the head is null.
      * @param head the head of the linked list.
+     * 
+     * TIME LEFT: 7:30
+     * TIME COMPLEXITY: O(n), n = the length of the LinkedList
      */
     public static boolean allPositive(ListNode head) {
+        if (head == null) {
+            return true;
+        }
+
+        ListNode current = head;
+
+        while (current != null) {
+            if (current.data <= 0) {
+                return false;
+            }
+
+            current = current.next;
+        }
+
         return true;
     }
 
