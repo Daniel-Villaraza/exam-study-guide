@@ -44,7 +44,7 @@ public class MidtermPractice {
      * Example: input: ["why"=7, "hello"=8, "brilliant"=99, "world"=15, "amazing"=17] -> output: 2
      * 
      * TIME LEFT 4:13
-     * TIME COMPLEXITY: O(n^2), n = number of words
+     * TIME COMPLEXITY: O(a * b), a = number of keys, b = length of characters
      */
     public static int countLongWords(Map<String, Integer> map) {
         int longWords = 0;
@@ -233,9 +233,47 @@ public class MidtermPractice {
      * Example Input: 6 -> 99 -> 2 -> 33 -> 10 -> 4
      * Example output: 99 -> 33 -> 10
      * Explanation: 6, 2, and 4 are each strictly less than 10, so they are removed from the list
+     * 
+     * TIME TAKEN: approx. a little under an hour
+     * TIME COMPLEXITY: O(n), n = the length of the LinkedList
      */
     public static ListNode removeSmall(ListNode head) {
-        return null;
-    }
+        if (head == null) {
+            return null;
+        }
 
+        ListNode current = head;
+
+        boolean hasFoundNewHead = false;
+        while (!hasFoundNewHead) {
+            if (current.data < 10) {
+                if (head.next != null) {
+                    head = head.next;
+                    current = head;
+                } else {
+                    return null;
+                }
+            } else {
+                hasFoundNewHead = true;
+                current = current.next;
+            }
+        }
+
+        current = head;
+        while (current != null) {
+            if (current.next == null) {
+                break;
+            }
+
+            if (current.next.data < 10) {
+                current.next = current.next.next;
+            }
+
+            current = current.next;
+        }
+
+        current = head;
+
+        return current;
+    }
 }
